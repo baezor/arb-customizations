@@ -30,6 +30,9 @@ class Arb_Customizations_Activator {
 	 * @since    1.0.0
 	 */
 	public static function activate() {
+		// Removing Jetpack CSS
+		add_filter( 'jetpack_sharing_counts', '__return_false', 99 );
+		add_filter( 'jetpack_implode_frontend_css', '__return_false', 99 );
 		
 
 	}
